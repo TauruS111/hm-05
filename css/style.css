@@ -566,6 +566,10 @@ footer {
   border: none;
 }
 
+.arrow-frame {
+  margin-left: 16px;
+}
+
 .aside-section {
   padding-top: 96px;
   padding-bottom: 120px;
