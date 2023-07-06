@@ -567,11 +567,14 @@ footer {
   padding: 8px 24px;
   justify-content: center;
   align-items: center;
-  gap: 16px;
   min-width: 165px;
   height: 40px;
   cursor: pointer;
   border: none;
+}
+
+.arrow-frame {
+  margin-left: 16px;
 }
 
 .subscribe-button:hover,
@@ -802,6 +805,9 @@ img {
   letter-spacing: 0.48px;
 }
 
+.form-wrapper {
+  position: relative;
+}
 .form-input {
   height: 40px;
   border-radius: 4px;
@@ -825,10 +831,10 @@ img {
 }
 
 .icon-modal {
-  position: relative;
+  position: absolute;
   top: 50%;
   left: 16px;
-  transform: translateY(-130%);
+  transform: translateY(-50%);
   pointer-events: none;
   fill: var(--bg-black);
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
