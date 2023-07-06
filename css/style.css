@@ -484,7 +484,6 @@ footer {
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
-  width: 264px;
   margin-bottom: 16px;
   color: #ffffff;
 }
@@ -520,6 +519,10 @@ footer {
   gap: 24px;
 }
 
+.wraper {
+  padding-left: 80px;
+}
+
 .sbcr-input {
   width: 264px;
   height: 40px;
@@ -536,12 +539,17 @@ footer {
   letter-spacing: 0.04em;
 }
 
-.form-label {
+.form-label-footer {
   color: #8e8f99;
   display: block;
-  margin-bottom: 4px;
   font-size: 12px;
   line-height: 1.17;
+  letter-spacing: 0.48px;
+}
+
+.sbcr-input::placeholder {
+  color: var(--bg-white);
+  font-size: 12px;
   letter-spacing: 0.48px;
 }
 
@@ -566,8 +574,9 @@ footer {
   border: none;
 }
 
-.arrow-frame {
-  margin-left: 16px;
+.subscribe-button:hover,
+.subscribe-button:focus {
+  background-color: var(--color-hover-focus);
 }
 
 .aside-section {
@@ -774,14 +783,14 @@ img {
 .form {
   display: flex;
   flex-direction: column;
-  gap: 8px;
-  padding: 8px;
   max-width: 360px;
   border: none;
 }
 
 .form-container {
   margin-bottom: 8px;
+  width: 360px;
+  height: 58px;
 }
 
 .form-label {
@@ -791,10 +800,6 @@ img {
   font-size: 12px;
   line-height: 1.17;
   letter-spacing: 0.48px;
-}
-
-.form-wrapper {
-  position: relative;
 }
 
 .form-input {
@@ -820,11 +825,12 @@ img {
 }
 
 .icon-modal {
-  position: absolute;
+  position: relative;
   top: 50%;
   left: 16px;
-  transform: translateY(-50%);
+  transform: translateY(-130%);
   pointer-events: none;
+  fill: var(--bg-black);
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -833,6 +839,7 @@ img {
 }
 
 .form-input-comment {
+  display: block;
   height: 120px;
   resize: none;
   width: 100%;
@@ -850,6 +857,12 @@ img {
 
 .form-input-comment:focus {
   border-color: #4d5ae5;
+}
+
+.form-input-comment::placeholder {
+  color: var(--navyblue-modal, rgba(46, 47, 66, 0.4));
+  font-size: 12px;
+  letter-spacing: 0.48px;
 }
 
 .form-title {
@@ -890,6 +903,7 @@ img {
 .checkbox-prop {
   width: 16px;
   height: 16px;
+  margin-right: 8px;
   border: 1px solid rgba(46, 47, 66, 0.4);
   border-radius: 2px;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
